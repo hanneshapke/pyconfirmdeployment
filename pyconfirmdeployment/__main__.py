@@ -1,6 +1,6 @@
 import sys
 import argparse
-from pyconfirmdeployment.confirm import get_confirmation
+import confirm
 
 
 def main(args=None):
@@ -24,7 +24,7 @@ def main(args=None):
         required=True)
 
     args = parser.parse_args()
-    sys.exit(get_confirmation(
+    sys.exit(confirm.get_confirmation(
         args.url, to_emails=[args.to, ], from_email=args.fromemail,)
     )
 
