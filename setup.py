@@ -38,5 +38,7 @@ setup(
     install_requires=install_requires,
     depedency_links=dependency_links,
     author_email='hannes.hapke@gmail.com',
-    entry_points={'console_scripts': ['%(package)s=%(package)s.%(package)s:main' % {'package': __package__}]},
+    entry_points={
+        'console_scripts': ['pyconfirmdeployment = pyconfirmdeployment.confirm:run_pyconfirmdeployment', ]},
+    # entry_points={'console_scripts': ['%(package)s=%(package)s.%(package)s:main' % {'package': __package__}]},
 )
