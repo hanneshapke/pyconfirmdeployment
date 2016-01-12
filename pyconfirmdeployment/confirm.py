@@ -60,8 +60,8 @@ def get_confirmation(
     send_email_confirmation(url, file_name, to_emails, from_email)
     remove_screenshot(file_name)
 
-if __name__ == "__main__":
 
+def run_pyconfirmdeployment():
     import argparse
     parser = argparse.ArgumentParser(
         description=(
@@ -82,3 +82,7 @@ if __name__ == "__main__":
     get_confirmation(
         args.url, to_emails=[args.to, ], from_email=args.fromemail,)
     print ('Deployment screenshot sent to {}').format(args.to)
+
+
+if __name__ == "__main__":
+    run_pyconfirmdeployment()
